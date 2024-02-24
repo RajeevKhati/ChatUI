@@ -1,6 +1,5 @@
 .mainContainer {
   background-color: rgb(43, 45, 49);
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  }
+  display: flex;
+}
