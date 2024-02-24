@@ -7,9 +7,11 @@ interface ContactCardProps {
 
 function ContactCard({ name, onClick }: ContactCardProps) {
   return (
-    <button onClick={() => onClick(name)} className={styles.container}>
-      {name}
-    </button>
+    <div className={styles.container}>
+      <button onClick={() => onClick(name)} className={styles.cardBtn}>
+        {name}
+      </button>
+    </div>
   );
 }
 

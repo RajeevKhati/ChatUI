@@ -1,5 +1,8 @@
 .chatChip {
-  background-color: aquamarine;
+  background-color: rgb(88, 101, 242);
   width: fit-content;
-  padding: 4px;
+  padding: 8px;
+  color: whitesmoke;
+  border: 1px solid rgb(88, 101, 242);
+  border-radius: 10px;
 }
