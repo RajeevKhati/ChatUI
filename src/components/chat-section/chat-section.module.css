@@ -1,0 +1,26 @@
+.container {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.chatChip {
+  max-width: 70%;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+
+.placeRight {
+  align-self: flex-end;
+}
+
+.messageInput {
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+}

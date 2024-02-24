@@ -1,0 +1,7 @@
+.container {
+  padding: 5px 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: red;
+}
