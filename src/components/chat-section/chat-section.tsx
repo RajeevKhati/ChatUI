@@ -23,7 +23,11 @@ function ChatSection() {
                 chat.sentByMe && styles.placeRight
               }`}
             >
-              <ChatChip message={chat.message} />
+              <ChatChip
+                name={chat.sentByMe ? "You" : state.selectedContact}
+                message={chat.message}
+                date={chat.date}
+              />
             </div>
           );
         })}
