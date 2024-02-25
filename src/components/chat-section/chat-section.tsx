@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./chat-section.module.css";
 import ChatChip from "../chat-chip/chat-chip";
 import { ChatContext } from "../../context/chat-context";
@@ -8,6 +8,7 @@ import { IconSend } from "../../icons/icon-send";
 
 function ChatSection() {
   const [message, setMessage] = useState("");
+  const divRef = useRef<HTMLDivElement>(null);
   const { state, dispatch } = useContext(ChatContext);
   const { fetchReply } = useReply();
 
@@ -27,6 +28,14 @@ function ChatSection() {
     setMessage("");
     fetchReply();
   };
+
+  useEffect(() => {
+    if (conversation.length && divRef.current) {
+      divRef.current.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, [conversation.length]);
 
   return (
     <div className={styles.container}>
@@ -48,6 +57,7 @@ function ChatSection() {
               </div>
             );
           })}
+          <div ref={divRef}></div>
         </div>
         <div className={styles.message}>
           <input
